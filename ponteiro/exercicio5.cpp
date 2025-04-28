@@ -22,8 +22,8 @@ int main(){
     int maior = *vet;
     trocaMaior(vet, tam, &maior);
     cout<<maior<<endl;
-    cout<<vet[0]<<endl;
-    cout<<vet[tam-1]<<endl;
+    cout<<*vet<<endl;
+    cout<<*(vet + (tam-1))<<endl;
     
     
     return 0;
