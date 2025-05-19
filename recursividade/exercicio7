@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cmath> // para pow()
+
+using namespace std;
+
+float soma(float x, int n) {
+    if (n == 1) {
+        return x; // Caso base: x^1 / 1
+    } else {
+        float termo = pow(x, n) / n;
+        if (n % 2 == 0) {
+            termo = -termo;
+        }
+        return soma(x, n - 1) + termo;
+    }
+}
+
+int main() {
+    float x;
+    int n;
+
+    cout << "Digite o valor de x: ";
+    cin >> x;
+
+    cout << "Digite o valor de n: ";
+    cin >> n;
+
+    float resultado = soma(x, n);
+    cout << "Resultado da soma: " << resultado << endl;
+
+    return 0;
+}
